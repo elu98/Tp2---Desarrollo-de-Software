@@ -3,12 +3,13 @@ from flask_mail import Mail, Message
 
 app = Flask(__name__)
 
+
 app.config['MAIL_SERVER'] = 'smtp.gmail.com' 
 app.config['MAIL_PORT'] = 587 
 app.config['MAIL_USE_TLS'] = True 
 app.config['MAIL_USE_SSL'] = False 
 app.config['MAIL_USERNAME'] = 'your-email@gmail.com' 
-app.config['MAIL_PASSWORD'] = 'your-email-password' security 
+app.config['MAIL_PASSWORD'] = 'your-email-password'
 app.config['MAIL_DEFAULT_SENDER'] = 'your-email@gmail.com' 
  
 mail = Mail(app)
@@ -42,7 +43,7 @@ def formulario():
         apellido = request.form.get("last_name")
         dni = request.form.get("documento")
         correo = request.form.get("correo")
-    return render_template("index.html")
+    return render_template("generic.html", evento=info_evento[1])
 
 if __name__ == '__main__':
     app.run('localhost', port=5002, debug=True)
