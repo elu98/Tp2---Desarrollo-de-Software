@@ -72,6 +72,25 @@ input, select, textarea {
 	appearance: none;
 }
 
+#reglamento{
+	display: block;    
+  width: max-content;   
+  margin: 0 auto;      
+}
+
+#deslinde:hover{
+  color: red !important;         
+}
+
+#deslinde{
+	 margin-top: 20px;
+	 display: block;
+	 font-size: 30px;
+}
+
+
+
+
 /* Basic */
 
 	@-ms-viewport {
@@ -1848,6 +1867,7 @@ input, select, textarea {
 		text-align: center;
 		text-decoration: none;
 		white-space: nowrap;
+		margin-bottom: 20px;
 	}
 
 		input[type="submit"].icon,
