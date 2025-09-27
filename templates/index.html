@@ -5,49 +5,86 @@
 {% block body %}
 
 	
-	<!-- Main -->
-	<div id="main">
+<!-- Main -->
+<div id="main">
 
-		<!-- Introduction -->
-		<section id="intro" class="main">
-			<div class="spotlight">
-				<div class="content">
-					<header class="major">
-						<h2>Ipsum sed adipiscing</h2>
-					</header>
-					<p>Rally MTB 2025 organizado por Club Social y Deportivo Unidos por el Deporte. 
-						Se realizará el 24 de Octubre de 2025 a las 8am en Tandil, Buenos Aires.</p>
-					<ul class="actions">
-					<a 
-					id="reglamento" href="{{url_for('static', filename='documents/Reglamento.pdf')}}" class="button" target="_blank">Reglamento
-					</a>
-						<li><a href="{{url_for('formulario')}}" class="button">Registrate</a></li>
-					</ul>
-				</div>
-				<span class="image"><img src="{{url_for('static', filename='images/bici1.jpeg')}}" alt="" /></span>
+	<!-- Introduction -->
+	<section id="intro" class="main">
+		<div class="spotlight">
+			<div class="content">
+				<header class="major">
+					<h2>Ipsum sed adipiscing</h2>
+				</header>
+				<p>Rally MTB 2025 organizado por Club Social y Deportivo Unidos por el Deporte. 
+					Se realizará el 24 de Octubre de 2025 a las 8am en Tandil, Buenos Aires.</p>
+				<ul class="actions">
+				<a 
+				id="reglamento" href="{{url_for('static', filename='documents/Reglamento.pdf')}}" class="button" target="_blank">Reglamento
+				</a>
+					<li><a href="{{url_for('formulario')}}" class="button">Registrate</a></li>
+				</ul>
 			</div>
-		</section>
+			<span class="image"><img src="{{url_for('static', filename='images/bici1.jpeg')}}" alt="" /></span>
+		</div>
+	</section>
 
-		<!-- Mapa (Google) -->
-		<section id="first" class="main special">
-			<header class="major">
-				<h2>Mapa del recorrido</h2>
-			</header>
-			<iframe src="https://www.google.com/maps/d/u/0/embed?mid=1XHC1evnvwW19Cxpd5lp7jN8vf8elgy0&ehbc=2E312F" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-			<ul class="features">
-				<li>
-					<h3>Punto de Salida</h3>
-					<p>El evento comenzará en la ciudad de Tandil, en la Plaza Independencia.</p>
-				</li>
-				<li>
-					<h3>Punto de Llegada</h3>
-					<p>El evento finalizará en la ciudad de Gardey, en la Plaza Principal.</p>
-				</li>
-				<li>
-					<h3>Puntos de Hidratacion</h3>
-					<p>Habrá puntos de hidratación cada 10 km a lo largo del recorrido.</p>
-				</li>					
+	<!-- Mapa (Google) -->
+	<section id="first" class="main special">
+		<header class="major">
+			<h2>Mapa del recorrido</h2>
+		</header>
+		<iframe src="https://www.google.com/maps/d/u/0/embed?mid=1XHC1evnvwW19Cxpd5lp7jN8vf8elgy0&ehbc=2E312F" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+		<ul class="features">
+			<li>
+				<h3>Punto de Salida</h3>
+				<p>El evento comenzará en la ciudad de Tandil, en la Plaza Independencia.</p>
+			</li>
+			<li>
+				<h3>Punto de Llegada</h3>
+				<p>El evento finalizará en la ciudad de Gardey, en la Plaza Principal.</p>
+			</li>
+			<li>
+				<h3>Puntos de Hidratacion</h3>
+				<p>Habrá puntos de hidratación cada 10 km a lo largo del recorrido.</p>
+			</li>					
+		</ul>
+		<footer class="major">
+			<ul class="actions special">
+				<li><a href="{{url_for('formulario')}}" class="button">Registrate</a></li>
 			</ul>
+		</footer>
+	</section>
+
+	<!-- Second Section -->
+		<section id="second" class="main special">
+			<header class="major">
+				<h2>Ipsum consequat</h2>
+				<p>Donec imperdiet consequat consequat. Suspendisse feugiat congue<br />
+				posuere. Nulla massa urna, fermentum eget quam aliquet.</p>
+			</header>
+			<ul class="statistics">
+				<li class="style1">
+					<span class="icon solid fa-code-branch"></span>
+					<strong>5,120</strong> Etiam
+				</li>
+				<li class="style2">
+					<span class="icon fa-folder-open"></span>
+					<strong>8,192</strong> Magna
+				</li>
+				<li class="style3">
+					<span class="icon solid fa-signal"></span>
+					<strong>2,048</strong> Tempus
+				</li>
+				<li class="style4">
+					<span class="icon solid fa-laptop"></span>
+					<strong>4,096</strong> Aliquam
+				</li>
+				<li class="style5">
+					<span class="icon fa-gem"></span>
+					<strong>1,024</strong> Nullam
+				</li>
+			</ul>
+			<p class="content">Nam elementum nisl et mi a commodo porttitor. Morbi sit amet nisl eu arcu faucibus hendrerit vel a risus. Nam a orci mi, elementum ac arcu sit amet, fermentum pellentesque et purus. Integer maximus varius lorem, sed convallis diam accumsan sed. Etiam porttitor placerat sapien, sed eleifend a enim pulvinar faucibus semper quis ut arcu. Ut non nisl a mollis est efficitur vestibulum. Integer eget purus nec nulla mattis et accumsan ut magna libero. Morbi auctor iaculis porttitor. Sed ut magna ac risus et hendrerit scelerisque. Praesent eleifend lacus in lectus aliquam porta. Cras eu ornare dui curabitur lacinia.</p>
 			<footer class="major">
 				<ul class="actions special">
 					<li><a href="{{url_for('formulario')}}" class="button">Registrate</a></li>
@@ -55,79 +92,42 @@
 			</footer>
 		</section>
 
-		<!-- Second Section -->
-			<section id="second" class="main special">
-				<header class="major">
-					<h2>Ipsum consequat</h2>
-					<p>Donec imperdiet consequat consequat. Suspendisse feugiat congue<br />
-					posuere. Nulla massa urna, fermentum eget quam aliquet.</p>
-				</header>
-				<ul class="statistics">
-					<li class="style1">
-						<span class="icon solid fa-code-branch"></span>
-						<strong>5,120</strong> Etiam
-					</li>
-					<li class="style2">
-						<span class="icon fa-folder-open"></span>
-						<strong>8,192</strong> Magna
-					</li>
-					<li class="style3">
-						<span class="icon solid fa-signal"></span>
-						<strong>2,048</strong> Tempus
-					</li>
-					<li class="style4">
-						<span class="icon solid fa-laptop"></span>
-						<strong>4,096</strong> Aliquam
-					</li>
-					<li class="style5">
-						<span class="icon fa-gem"></span>
-						<strong>1,024</strong> Nullam
-					</li>
-				</ul>
-				<p class="content">Nam elementum nisl et mi a commodo porttitor. Morbi sit amet nisl eu arcu faucibus hendrerit vel a risus. Nam a orci mi, elementum ac arcu sit amet, fermentum pellentesque et purus. Integer maximus varius lorem, sed convallis diam accumsan sed. Etiam porttitor placerat sapien, sed eleifend a enim pulvinar faucibus semper quis ut arcu. Ut non nisl a mollis est efficitur vestibulum. Integer eget purus nec nulla mattis et accumsan ut magna libero. Morbi auctor iaculis porttitor. Sed ut magna ac risus et hendrerit scelerisque. Praesent eleifend lacus in lectus aliquam porta. Cras eu ornare dui curabitur lacinia.</p>
-				<footer class="major">
-					<ul class="actions special">
-						<li><a href="{{url_for('formulario')}}" class="button">Registrate</a></li>
-					</ul>
-				</footer>
-			</section>
-
-		<!-- Get Started -->
-			<section id="cta" class="main special">
-				<header class="major">
-					<h2>Inscripcion</h2>
-					<p>Rellena el formulario para inscribirte en el evento.</p>
-					<li><a href="{{url_for('formulario')}}" class="button">Registrate</a></li>
-					<p>Formulario obligatorio de deslinde de responsabilidad.</p>
-					<a id="deslinde" href="{{url_for('static', filename='documents/Deslinde.pdf')}}" target="_blank">Deslinde de responsabilidad</a>
-					
-					<li>Kit de Carrera</li>
-
-					<ol>
-						<li>Número de corredor (dorsal) con chip de cronometraje.</li>
-						<li>Remera técnica o jersey oficial del evento.</li>
-						<li>Botella de agua o bebida isotónica.</li>
-						<li>Barra energética o gel de nutrición.
-						<li>Mapa del circuito y reglamento impreso. </li>
-						<li>Deslinde de responsabilidad (si no fue firmado online).</li>
-						<li>Bolsa o mochila oficial del evento.</li>
-						<li>Souvenirs y material promocional de los sponsors.</li>
-						<li>Pulsera o credencial de identificación del corredor.</li>
-						<li>Ticket para hidratación o lunch post-carrera.</li>
-					</ol>
+	<!-- Get Started -->
+		<section id="cta" class="main special">
+			<header class="major">
+				<h2>Inscripcion</h2>
+				<p>Rellena el formulario para inscribirte en el evento.</p>
+				<li><a href="{{url_for('formulario')}}" class="button">Registrate</a></li>
+				<p>Formulario obligatorio de deslinde de responsabilidad.</p>
+				<a id="deslinde" href="{{url_for('static', filename='documents/Deslinde.pdf')}}" target="_blank">Deslinde de responsabilidad</a>
 				
-				</header>
-				<footer class="major">
-					<ul class="actions special">
-						<li><a href="{{url_for('formulario')}}" class="button">Registrate</a></li>
-						<li><a href="{{url_for('formulario')}}" class="button">Registrate</a></li>
-						<li><a href="{{url_for('formulario')}}" class="button">Registrate</a></li>
-						<li><a href="{{url_for('formulario')}}" class="button">Registrate</a></li>
-						<li><a href="{{url_for('formulario')}}" class="button">Registrate</a></li>
-					</ul>
-				</footer>
-			</section>
+				<li>Kit de Carrera</li>
 
-	</div>
+				<ol>
+					<li>Número de corredor (dorsal) con chip de cronometraje.</li>
+					<li>Remera técnica o jersey oficial del evento.</li>
+					<li>Botella de agua o bebida isotónica.</li>
+					<li>Barra energética o gel de nutrición.
+					<li>Mapa del circuito y reglamento impreso. </li>
+					<li>Deslinde de responsabilidad (si no fue firmado online).</li>
+					<li>Bolsa o mochila oficial del evento.</li>
+					<li>Souvenirs y material promocional de los sponsors.</li>
+					<li>Pulsera o credencial de identificación del corredor.</li>
+					<li>Ticket para hidratación o lunch post-carrera.</li>
+				</ol>
+			
+			</header>
+			<footer class="major">
+				<ul class="actions special">
+					<li><a href="{{url_for('formulario')}}" class="button">Registrate</a></li>
+					<li><a href="{{url_for('formulario')}}" class="button">Registrate</a></li>
+					<li><a href="{{url_for('formulario')}}" class="button">Registrate</a></li>
+					<li><a href="{{url_for('formulario')}}" class="button">Registrate</a></li>
+					<li><a href="{{url_for('formulario')}}" class="button">Registrate</a></li>
+				</ul>
+			</footer>
+		</section>
+
+</div>
 
 {% endblock %}

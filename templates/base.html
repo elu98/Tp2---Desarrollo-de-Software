@@ -1,74 +1,73 @@
 <!DOCTYPE HTML>
-
-<title>{% block title %} {% endblock %}</title>
-
-<body class="is-preload">
-	<div id="wrapper">
-		
-		<!-- Nav -->
-			<nav id="nav">
-				<ul>
-					<li><a href="#intro" class="active">Introduccion</a></li>
-					<li><a href="#first">Mapas</a></li>
-					<li><a href="#second">Auspiciantes</a></li>
-					<li><a href="#cta">Inscripcion</a></li>
-				</ul>
-			</nav>
-
-			<!-- Header -->
-			<header id="header" class="alt">
-				<span class="logo"><img src="{{url_for('static', filename='images/logo.png')}}" alt="" /></span>
-				<h1>{{evento.nombre}}</h1>
-				<p>{{evento.organizador}}</p>
-			</header>
-
-		{% block body %}
-
-		{% endblock %}
-
-	
-	
-	</div>
-
-</body>
-
-
-		
 <html>
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<title>{% block title %} {% endblock %}</title>
 		<link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}" />
 		<noscript><link rel="stylesheet" href="{{url_for('static', filename='css/noscript.css')}}" /></noscript>
 	</head>
 
-	<script src="{{url_for('static', filename='js/jquery.min.js')}}"></script>
-	<script src="{{url_for('static', filename='js/jquery.scrollex.min.js')}}"></script>
-	<script src="{{url_for('static', filename='js/jquery.scrolly.min.js')}}"></script>
-	<script src="{{url_for('static', filename='js/browser.min.js')}}"></script>
-	<script src="{{url_for('static', filename='js/breakpoints.min.js')}}"></script>
-	<script src="{{url_for('static', filename='js/util.js')}}"></script>
-	<script src="{{url_for('static', filename='js/main.js')}}"></script>
+	<body class="is-preload">
+		
 
-	<footer id="footer">
-		<section>
-			<h2>Club Social y Deportivo Unidos por el Deporte S.A.</h2>
-			<dl class="alt">
-				<dt>Direccion</dt>
-				<dd>Machado 1069, Tandil &bull; Provincia de Buenos Aires &bull; ARG</dd>
-				<dt>Telefono</dt>
-				<dd>(011) 555-5555 (Whatsapp)</dd>
-				<dt>Email</dt>
-				<dd><a href="#">info@clubdeportivo.com.ar</a></dd>
-			</dl>
-			<ul class="icons">
-				<li><a href="https://www.twitter.com/" class="icon brands fa-twitter alt"><span class="label">Twitter</span></a></li>
-				<li><a href="https://www.facebook.com/" class="icon brands fa-facebook-f alt"><span class="label">Facebook</span></a></li>
-				<li><a href="https://www.instagram.com/" class="icon brands fa-instagram alt"><span class="label">Instagram</span></a></li>
-				<li><a href="https://www.github.com/" class="icon brands fa-github alt"><span class="label">GitHub</span></a></li>
-			</ul>
-		</section>
-		<p class="copyright">&copy; TP2. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
-	</footer>
+
+		<div id="wrapper">
+			
+			<!-- Nav -->
+				<nav id="nav">
+					<ul>
+						<li><a href="#intro" class="active">Introduccion</a></li>
+						<li><a href="#first">Mapas</a></li>
+						<li><a href="#second">Auspiciantes</a></li>
+						<li><a href="#cta">Inscripcion</a></li>
+					</ul>
+				</nav>
+
+				<!-- Header -->
+				<header id="header" class="alt">
+					<span class="logo"><img src="{{url_for('static', filename='images/logo.png')}}" alt="" /></span>
+					<h1>{{evento.nombre}}</h1>
+					<p>{{evento.organizador}}</p>
+				</header>
+
+			{% block body %}
+
+			{% endblock %}
+
+		
+		
+		</div>
+
+		<footer id="footer">
+			<section>
+				<h2>Club Social y Deportivo Unidos por el Deporte S.A.</h2>
+				<dl class="alt">
+					<dt>Direccion</dt>
+					<dd>Machado 1069, Tandil &bull; Provincia de Buenos Aires &bull; ARG</dd>
+					<dt>Telefono</dt>
+					<dd>(011) 555-5555 (Whatsapp)</dd>
+					<dt>Email</dt>
+					<dd><a href="#">info@clubdeportivo.com.ar</a></dd>
+				</dl>
+				<ul class="icons">
+					<li><a href="https://www.twitter.com/" class="icon brands fa-twitter alt"><span class="label">Twitter</span></a></li>
+					<li><a href="https://www.facebook.com/" class="icon brands fa-facebook-f alt"><span class="label">Facebook</span></a></li>
+					<li><a href="https://www.instagram.com/" class="icon brands fa-instagram alt"><span class="label">Instagram</span></a></li>
+					<li><a href="https://www.github.com/" class="icon brands fa-github alt"><span class="label">GitHub</span></a></li>
+				</ul>
+			</section>
+			<p class="copyright">&copy; TP2. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+		</footer>
+
+		<script src="{{url_for('static', filename='js/jquery.min.js')}}"></script>
+		<script src="{{url_for('static', filename='js/jquery.scrollex.min.js')}}"></script>
+		<script src="{{url_for('static', filename='js/jquery.scrolly.min.js')}}"></script>
+		<script src="{{url_for('static', filename='js/browser.min.js')}}"></script>
+		<script src="{{url_for('static', filename='js/breakpoints.min.js')}}"></script>
+		<script src="{{url_for('static', filename='js/util.js')}}"></script>
+		<script src="{{url_for('static', filename='js/main.js')}}"></script>
+
+	</body>	
 
 </html>
