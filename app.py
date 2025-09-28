@@ -43,7 +43,7 @@ def formulario():
         apellido = request.form.get("last_name")
         dni = request.form.get("documento")
         correo = request.form.get("correo")
-    return render_template("generic.html", evento=info_evento[1])
+    return render_template("registration.html", evento=info_evento[1])
 
 if __name__ == '__main__':
     app.run('localhost', port=5002, debug=True)
