@@ -17,8 +17,14 @@ fi
 mkdir -p {static/{css,images},templates,.venv}
 touch app.py
 
-pipenv install Flask
-pipenv install Flask-Mail
+python3 -m venv .venv
+
+source .venv/bin/activate
+
+pip3 install Flask
+pip3 install Flask-Mail
+
+deactivate
 
 echo "Virtual Environment created and Flask installed."
 
