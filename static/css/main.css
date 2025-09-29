@@ -197,6 +197,14 @@ input, select, textarea {
 	}
 
 		p.content {
+			-moz-columns: 20em 2;
+			-webkit-columns: 20em 2;
+			-ms-columns: 20em 2;
+			columns: 20em 2;
+			-moz-column-gap: 2em;
+			-webkit-column-gap: 2em;
+			-ms-column-gap: 2em;
+			column-gap: 2em;
 			text-align: justify;
 		}
 
@@ -3699,11 +3707,12 @@ input, select, textarea {
 		-webkit-flex-wrap: wrap;
 		-ms-flex-wrap: wrap;
 		flex-wrap: wrap;
-		padding: 4em 4em 3em 4em ;
+		padding: 5em 5em 3em 5em ;
 		width: calc(100% + 2em);
-		margin: 0 0 3em -2em;
+		margin: 0 -3em 1em 0;
 		display: flex;
 		justify-content: center; /* centra horizontalmente */
+		max-width: 1194.67px;
 	}
 
 		#footer > * {
