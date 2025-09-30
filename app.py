@@ -8,11 +8,12 @@ app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 587 
 app.config['MAIL_USE_TLS'] = True 
 app.config['MAIL_USE_SSL'] = False 
-app.config['MAIL_USERNAME'] = 'your-email@gmail.com' 
-app.config['MAIL_PASSWORD'] = 'your-email-password'
-app.config['MAIL_DEFAULT_SENDER'] = 'your-email@gmail.com' 
+app.config['MAIL_USERNAME'] = 'unidosporeldeportemtb@gmail.com' 
+app.config['MAIL_PASSWORD'] = 'pfvttqtdqeclwmsr'
+app.config['MAIL_DEFAULT_SENDER'] = 'unidosporeldeportemtb@gmail.com' 
  
 mail = Mail(app)
+app.secret_key = "clavesecreta"
 
 info_evento = {
     1: {
@@ -55,6 +56,27 @@ def formulario():
         apellido = request.form.get("last_name")
         dni = request.form.get("documento")
         correo = request.form.get("correo")
+
+        body = f"""
+        Nuevo competidor inscripto:
+
+        Nombre: {nombre} {apellido}
+        DNI: {dni}
+        Correo: {correo}
+        Categoría: {categoria}
+        """
+
+        try:
+            msg = Message("Nueva inscripción a la carrera",
+                          recipients=["unidosporeldeportemtb@gmail.com"])
+            msg.body = body
+            mail.send(msg)
+            flash("Inscripción enviada con éxito", "success")
+        except Exception as e:
+            flash(f"Error enviando correo: {str(e)}", "danger")
+
+        return redirect("formulario")
+
     return render_template("registration.html", evento=info_evento[1])
 
 if __name__ == '__main__':
