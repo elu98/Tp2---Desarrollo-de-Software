@@ -15,6 +15,7 @@
 			<li><a href="#first">Mapas</a></li>
 			<li><a href="#second">Auspiciantes</a></li>
 			<li><a href="#third">Inscripción</a></li>
+			<li><a href="#fourth">Kit de carrera</a></li>
 		</ul>
 	</nav>
 
@@ -132,13 +133,16 @@
 	<section id="third" class="main special">
 		<header class="major">
 			<h2>Inscripcion</h2>
+		</header>
 			<p>Rellena el formulario para inscribirte en el evento.</p>
 			<li><a href="{{url_for('formulario')}}" class="button">Registrate</a></li>
-			<p>Formulario obligatorio de deslinde de responsabilidad.</p>
-			<a id="deslinde" href="{{url_for('static', filename='documents/Deslinde.pdf')}}" target="_blank">Deslinde de responsabilidad</a>
-			
-			<li>Kit de Carrera</li>
-
+			<a id="deslinde" href="{{url_for('static', filename='documents/Deslinde.pdf')}}" target="_blank">Formulario obligatorio de deslinde de responsabilidad</a>
+	</section>
+	
+	<section id="fourth" class="main special">
+		<header class="major"></header>
+			<h2>Kit de Carrera</h2>
+		</header>
 			<ol>
 				<li>Número de corredor (dorsal) con chip de cronometraje.</li>
 				<li>Remera técnica o jersey oficial del evento.</li>
@@ -151,7 +155,6 @@
 				<li>Pulsera o credencial de identificación del corredor.</li>
 				<li>Ticket para hidratación o lunch post-carrera.</li>
 			</ol>
-		
 		</header>
 		<footer class="major">
 			<ul class="actions special">
