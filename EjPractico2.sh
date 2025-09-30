@@ -24,7 +24,5 @@ source .venv/bin/activate
 pip3 install Flask
 pip3 install Flask-Mail
 
-deactivate
-
 echo "Virtual Environment created and Flask installed."
 

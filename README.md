@@ -13,7 +13,7 @@ bash EjPractico2.sh
 ~~~
 El script dejara el ambiente virtual activo
 	
-- Ejecutar el comando: 
+- En la misma terminal ejecutar el comando: 
 ~~~ 
 python3 app.py 
 ~~~
