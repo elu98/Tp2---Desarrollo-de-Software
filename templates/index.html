@@ -91,29 +91,25 @@
 
 	<!-- Get Started -->
 	<section id="third" class="main special">
+
+		<div class="kit">
+			<h3>Kit de carrera</h3>
+			<p>El evento incluye los siguientes elementos esenciales para los participantes:</p>
+			<p>
+				{% for item in kit %}
+					<li>{{ item }}</li>
+				{% endfor %}
+			</p>
+		</div>
+
 		<header class="major">
-			<h2>Inscripcion</h2>
-			<p>Rellena el formulario para inscribirte en el evento.</p>
-			<li><a href="{{url_for('formulario')}}" class="button">Registrate</a></li>
+			<h2>Inscripción</h2>
+			<p>Rellena el formulario para inscribirte al evento.</p>
+			<a href="{{url_for('formulario')}}" class="button">Registrate</a>
 			<p>Formulario obligatorio de deslinde de responsabilidad.</p>
 			<a id="deslinde" href="{{url_for('static', filename='documents/Deslinde.pdf')}}" target="_blank">Deslinde de responsabilidad</a>
-			
-			<li>Kit de Carrera</li>
-
-			<ol>
-				<li>Número de corredor (dorsal) con chip de cronometraje.</li>
-				<li>Remera técnica o jersey oficial del evento.</li>
-				<li>Botella de agua o bebida isotónica.</li>
-				<li>Barra energética o gel de nutrición.
-				<li>Mapa del circuito y reglamento impreso. </li>
-				<li>Deslinde de responsabilidad (si no fue firmado online).</li>
-				<li>Bolsa o mochila oficial del evento.</li>
-				<li>Souvenirs y material promocional de los sponsors.</li>
-				<li>Pulsera o credencial de identificación del corredor.</li>
-				<li>Ticket para hidratación o lunch post-carrera.</li>
-			</ol>
-		
 		</header>
+
 		<footer class="major">
 			<ul class="actions special">
 				<li><a href="{{url_for('formulario')}}" class="button">Registrate</a></li>

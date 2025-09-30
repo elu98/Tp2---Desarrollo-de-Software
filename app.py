@@ -28,12 +28,24 @@ info_evento = {
             2: {"nombre": "Larga", "valor": "200"}
         },
         "Auspiciantes": ["ausp1", "ausp2"]
+    },
+    2: {
+        "kit_carrera": ["Número de corredor (dorsal) con chip de cronometraje.",
+				"Remera técnica o jersey oficial del evento.",
+				"Botella de agua o bebida isotónica.",
+				"Barra energética o gel de nutrición.",
+				"Mapa del circuito y reglamento impreso. ",
+				"Deslinde de responsabilidad (si no fue firmado online).",
+				"Bolsa o mochila oficial del evento.",
+				"Souvenirs y material promocional de los sponsors.",
+				"Pulsera o credencial de identificación del corredor.",
+				"Ticket para hidratación o lunch post-carrera."]
     }
 }
     
 @app.route('/')
 def home():
-    return render_template('index.html', evento=info_evento[1])
+    return render_template('index.html', evento=info_evento[1], kit=info_evento[2]["kit_carrera"])
 
 @app.route('/formulario', methods=["GET", "POST"])
 def formulario():
