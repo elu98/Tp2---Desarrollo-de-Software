@@ -1,31 +1,20 @@
-Stellar by HTML5 UP
-html5up.net | @ajlkn
-Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+Integrantes:
+	Branko Ivan Tintilay Tacacho		102479
+	Ruth Paola Lopez Ferreira			112315
+	Eluney Gustavo Molinas				113733
 
 
-Say hello to Stellar, a slick little one-pager with a super vibrant color palette (which
-I guess you can always tone down if it's a little too vibrant for you), a "sticky" in-page
-nav bar (powered by my Scrollex plugin), a separate generic page template (just in case
-you need one), and an assortment of pre-styled elements.
-
-Demo images* courtesy of Unsplash, a radtastic collection of CC0 (public domain) images
-you can use for pretty much whatever.
-
-(* = not included)
-
-AJ
-aj@lkn.io | @ajlkn
+Instructivo:
+	- Clonar el repositorio desde la rama deploy
+	
+	- En el directorio creado abrir una terminal y ejecutar el script de bash con el comando: 
+		bash EjPractico2.sh		# El script dejara el ambiente virtual activo
+	
+	- Ejecutar el comando:
+		python3 app.py
 
 
-Credits:
-
-	Demo Images:
-		Unsplash (unsplash.com)
-
-	Icons:
-		Font Awesome (fontawesome.io)
-
-	Other:
-		jQuery (jquery.com)
-		Scrollex (github.com/ajlkn/jquery.scrollex)
-		Responsive Tools (github.com/ajlkn/responsive-tools)
+Template Usado:
+	[Stellar](https://html5up.net/stellar) by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 [license](https://html5up.net/license)
