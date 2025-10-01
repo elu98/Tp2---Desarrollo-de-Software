@@ -82,6 +82,12 @@ input, select, textarea {
   color: red !important;         
 }
 
+#header {
+	color: blanchedalmond;
+    font-weight: bold;
+	font-size: 20px;
+}
+
 
 /* Basic */
 

@@ -11,11 +11,11 @@
 	<!-- Nav -->
 	<nav id="nav">
 		<ul>
-			<li><a href="#intro" class="active">Introduccion</a></li>
+			<li><a href="#intro" class="active">Introducción</a></li>
 			<li><a href="#first">Mapas</a></li>
 			<li><a href="#second">Auspiciantes</a></li>
-			<li><a href="#third">Inscripción</a></li>
-			<li><a href="#fourth">Kit de carrera</a></li>
+			<li><a href="#third">Kit de carrera</a></li>
+			<li><a href="#fourth">Inscripción</a></li>
 			<li><a href="#contacto">Contacto</a></li>
 		</ul>
 	</nav>
@@ -27,8 +27,8 @@
 				<header class="major">
 					<h2>{{evento.nombre}}</h2>
 				</header>
-				<p>Rally MTB 2025 organizado por Club Social y Deportivo Unidos por el Deporte. 
-					Se realizará el 24 de Octubre de 2025 a las 8am en Tandil, Buenos Aires.</p>
+				<p>{{evento.nombre}} organizado por {{evento.organizador}}. 
+					Se realizará el {{evento.fecha}} a las {{evento.horario}} en {{evento.lugar}}.</p>
 				<ul class="actions">
 				<a 
 				id="reglamento" href="{{url_for('static', filename='documents/Reglamento.pdf')}}" class="button" target="_blank">Reglamento
@@ -132,31 +132,30 @@
 
 	<!-- Get Started -->
 	<section id="third" class="main special">
-		<header class="major">
-			<h2>Inscripcion</h2>
-		</header>
-			<p>Rellena el formulario para inscribirte en el evento.</p>
-			<li><a href="{{url_for('formulario')}}" class="button">Registrate</a></li>
-			<a id="deslinde" href="{{url_for('static', filename='documents/Deslinde.pdf')}}" target="_blank">Formulario obligatorio de deslinde de responsabilidad</a>
+		
+		<h2>Kit de Carrera</h2>
+
+		<p>Al inscribirte en el evento, recibirás un kit de carrera que incluye los siguientes elementos:</p>
+		
+		<ol>
+			{% for item in kit %}
+			<li>{{item}}</li>
+			{% endfor %}
+		</ol>
+	
+		
 	</section>
 	
 	<section id="fourth" class="main special">
-		<header class="major"></header>
-			<h2>Kit de Carrera</h2>
+		<header class="major">
+			<h2>Inscripción</h2>
 		</header>
-			<ol>
-				<li>Número de corredor (dorsal) con chip de cronometraje.</li>
-				<li>Remera técnica o jersey oficial del evento.</li>
-				<li>Botella de agua o bebida isotónica.</li>
-				<li>Barra energética o gel de nutrición.
-				<li>Mapa del circuito y reglamento impreso. </li>
-				<li>Deslinde de responsabilidad (si no fue firmado online).</li>
-				<li>Bolsa o mochila oficial del evento.</li>
-				<li>Souvenirs y material promocional de los sponsors.</li>
-				<li>Pulsera o credencial de identificación del corredor.</li>
-				<li>Ticket para hidratación o lunch post-carrera.</li>
-			</ol>
-		</header>
+		<p>Rellena el formulario para inscribirte al evento.</p>
+		<div>
+			<a href="{{url_for('formulario')}}" class="button">Registrate</a>
+		</div>
+		<a id="deslinde" href="{{url_for('static', filename='documents/Deslinde.pdf')}}" target="_blank">Formulario obligatorio de deslinde de responsabilidad</a>
+
 		<footer class="major">
 			<ul class="actions special">
 				<li><a href="{{url_for('formulario')}}" class="button">Registrate</a></li>
