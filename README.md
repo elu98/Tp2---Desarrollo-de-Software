@@ -5,14 +5,14 @@
  
 
 ## Instructivo:
-- Clonar el repositorio desde la rama deploy
-	
-- En el directorio creado abrir una terminal y ejecutar el script de bash con el comando: 
+- Crear un directorio nuevo, abrir allí una terminal y ejecutar el script de bash con el comando: 
 ~~~
 bash EjPractico2.sh
 ~~~
-El script dejara el ambiente virtual activo
-	
+El script creará todos los directorios necesarios para la estructura de Flask, además de crear el ambiente virtual. Luego hay que:
+
+- Clonar el repositorio desde la rama deploy
+		
 - En la misma terminal ejecutar el comando: 
 ~~~ 
 python3 app.py 
