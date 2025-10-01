@@ -27,17 +27,20 @@
 				<header class="major">
 					<h2>{{evento.nombre}}</h2>
 				</header>
+				
 				<p>{{evento.nombre}} organizado por {{evento.organizador}}. 
 					Se realizará el {{evento.fecha}} a las {{evento.horario}} en {{evento.lugar}}.</p>
 				<ul class="actions">
-				<a 
-				id="reglamento" href="{{url_for('static', filename='documents/Reglamento.pdf')}}" class="button" target="_blank">Reglamento
-				</a>
+					<a id="reglamento" href="{{url_for('static', filename='documents/Reglamento.pdf')}}" class="button" target="_blank">Reglamento</a>
 					<li><a href="{{url_for('formulario')}}" class="button">Registrate</a></li>
 				</ul>
+			
 			</div>
+			
 			<span class="image"><img src="{{url_for('static', filename='images/bici1.jpeg')}}" alt="" /></span>
+		
 		</div>
+		
 		<div class="content">
 			<section>
 				<header class="major">
@@ -73,11 +76,6 @@
 				<p>Habrá puntos de hidratación cada 10 km a lo largo del recorrido.</p>
 			</li>					
 		</ul>
-		<footer class="major">
-			<ul class="actions special">
-				<li><a href="{{url_for('formulario')}}" class="button">Registrate</a></li>
-			</ul>
-		</footer>
 	</section>
 
 
@@ -101,11 +99,6 @@
 				<p>Habrá puntos de hidratación cada 10 km a lo largo del recorrido.</p>
 			</li>					
 		</ul>
-		<footer class="major">
-			<ul class="actions special">
-				<li><a href="{{url_for('formulario')}}" class="button">Registrate</a></li>
-			</ul>
-		</footer>
 	</section>
 
 	<!-- Sponsors-->
@@ -114,33 +107,14 @@
 			<h2>Auspiciantes</h2>
 		</header>
 		<ul class="statistics">
-			<li class="style1">
-				<span class="icon solid brands fa-google"></span>
-				<strong>Google</strong>
+			{% for sponsor in evento.auspiciantes %}
+				<li class="style3">
+				<span class="icon solid brands fa-{{sponsor}}"></span>
+				<strong>{{sponsor.capitalize()}}</strong>
 			</li>
-			<li class="style2">
-				<span class="icon solid brands fa-youtube"></span>
-				<strong>YouTube</strong>
-			</li>
-			<li class="style3">
-				<span class="icon solid brands fa-linkedin"></span>
-				<strong>LinkedIn</strong>
-			</li>
-			<li class="style4">
-				<span class="icon solid brands fa-shopify"></span>
-				<strong>Shopify</strong>
-			</li>
-			<li class="style5">
-				<span class="icon solid brands fa-rebel"></span>
-				<strong>Alianza Rebelde</strong>
-			</li>
+			{% endfor %}
 		</ul>
 		<p class="content">Desde la organización queremos expresar nuestro más sincero agradecimiento a las empresas y organizaciones que hicieron posible esta edición. Contar con el respaldo de marcas líderes a nivel global no solo fortalece nuestro compromiso con el deporte, sino que también nos permite ofrecer una experiencia de mayor calidad para todos los participantes, voluntarios y asistentes.</p>
-		<footer class="major">
-			<ul class="actions special">
-				<li><a href="{{url_for('formulario')}}" class="button">Registrate</a></li>
-			</ul>
-		</footer>
 	</section>
 
 	<!-- Get Started -->
@@ -169,15 +143,6 @@
 		</div>
 		<a id="deslinde" href="{{url_for('static', filename='documents/Deslinde.pdf')}}" target="_blank">Formulario obligatorio de deslinde de responsabilidad</a>
 
-		<footer class="major">
-			<ul class="actions special">
-				<li><a href="{{url_for('formulario')}}" class="button">Registrate</a></li>
-				<li><a href="{{url_for('formulario')}}" class="button">Registrate</a></li>
-				<li><a href="{{url_for('formulario')}}" class="button">Registrate</a></li>
-				<li><a href="{{url_for('formulario')}}" class="button">Registrate</a></li>
-				<li><a href="{{url_for('formulario')}}" class="button">Registrate</a></li>
-			</ul>
-		</footer>
 	</section>
 
 </div>
