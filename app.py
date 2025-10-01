@@ -28,7 +28,14 @@ info_evento = {
             1: {"nombre": "Corta", "valor": "100"},
             2: {"nombre": "Larga", "valor": "200"}
         },
-        "Auspiciantes": ["ausp1", "ausp2"]
+        "auspiciantes": ["google", "youtube", "linkedin", "shopify", "rebel"],
+        "telefono": "(011) 555-5555",
+        "email": "info@clubdeportivo.com.ar",
+        "sociales": {
+            "facebook": "https://www.facebook.com/unidosporeldeporte",
+            "instagram": "https://www.instagram.com/unidosporeldeporte",
+            "twitter": "https://www.twitter.com/unidosporedeporte"
+        }
     },
     2: {
         "kit_carrera": ["Número de corredor (dorsal) con chip de cronometraje.",
