@@ -29,24 +29,23 @@
 			<footer id="footer">
 				
 				<section>
-					<h2>Club Social y Deportivo Unidos por el Deporte S.A.</h2>
+					<h2>{{evento.organizador}}</h2>
 					<dl class="alt">
 						<dt>Direccion</dt>
-						<dd>Machado 1069, Tandil &bull; Provincia de Buenos Aires &bull; ARG</dd>
+						<dd>{{evento.lugar}}</dd>
 						<dt>Telefono</dt>
-						<dd>(011) 555-5555 (Whatsapp)</dd>
+						<dd>{{evento.telefono}}</dd>
 						<dt>Email</dt>
-						<dd><a href="#">info@clubdeportivo.com.ar</a></dd>
+						<dd><a href="#">{{evento.email}}</a></dd>
 					</dl>
 					
 					<ul class="icons">
-						<li><a href="https://www.twitter.com/" class="icon brands fa-twitter alt"><span class="label">Twitter</span></a></li>
-						<li><a href="https://www.facebook.com/" class="icon brands fa-facebook-f alt"><span class="label">Facebook</span></a></li>
-						<li><a href="https://www.instagram.com/" class="icon brands fa-instagram alt"><span class="label">Instagram</span></a></li>
-						<li><a href="https://www.github.com/" class="icon brands fa-github alt"><span class="label">GitHub</span></a></li>
+						{% for red,link in evento.sociales.items() %}
+							<li><a href= {{link}} class="icon brands fa-{{red}} alt"><span class="label"> {{red}} </span></a></li>
+						{% endfor %}
 					</ul>
 				
-				</section>
+				</section></a>
 				
 				<p class="copyright">&copy; TP2. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
 			
