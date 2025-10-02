@@ -2381,58 +2381,36 @@ input, select, textarea {
 
 /* Image */
 
-	.image {
-		border-radius: 8px;
-		border: 0;
-		display: inline-block;
-		position: relative;
-	}
-
-		.image img {
-			border-radius: 8px;
-			display: block;
+	.image1 {
+		display: block;
+		width: 100%;  
+		height: 250px;      
+		overflow: hidden;   
+		border-radius: 20px;
 		}
 
-		.image.left, .image.right {
-			max-width: 40%;
+		.image1 img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		display: block;
 		}
 
-			.image.left img, .image.right img {
-				width: 100%;
-			}
-
-		.image.left {
-			float: left;
-			margin: 0 1.5em 1em 0;
-			top: 0.25em;
-		}
-
-		.image.right {
-			float: right;
-			margin: 0 0 1em 1.5em;
-			top: 0.25em;
-		}
-
-		.image.fit {
-			display: block;
-			margin: 0 0 2em 0;
+		.image3 {
+			display: flex;
+			justify-content: center; 
+			align-items: center;   
 			width: 100%;
+			height: 250px;
+			overflow: hidden;
+			border-radius: 20px;
 		}
 
-			.image.fit img {
-				width: 100%;
-			}
-
-		.image.main {
-			display: block;
-			margin: 0 0 3em 0;
-			width: 100%;
+		.image3 img {
+			width: 300px;
+			height: auto;
+			object-fit: cover;
 		}
-
-			.image.main img {
-				width: 100%;
-			}
-
 /* List */
 
 	ol {
@@ -2897,6 +2875,12 @@ input, select, textarea {
 		cursor: default;
 	}
 
+		.statistics li:nth-child(1) { background: #6b9ae6; }
+		.statistics li:nth-child(2) { background: #ee4b4b; } 
+		.statistics li:nth-child(3) { background: #0077B5; } 
+		.statistics li:nth-child(4) { background: #95BF47; } 
+		.statistics li:nth-child(5) { background: #ff6f61; } 
+
 		.statistics li {
 			-moz-flex: 1;
 			-webkit-flex: 1;
@@ -2906,26 +2890,6 @@ input, select, textarea {
 			color: #ffffff;
 			text-align: center;
 		}
-
-			.statistics li.style1 {
-				background-color: #efa8b0;
-			}
-
-			.statistics li.style2 {
-				background-color: #c79cc8;
-			}
-
-			.statistics li.style3 {
-				background-color: #a89cc8;
-			}
-
-			.statistics li.style4 {
-				background-color: #9bb2e1;
-			}
-
-			.statistics li.style5 {
-				background-color: #8cc9f0;
-			}
 
 			.statistics li strong, .statistics li b {
 				display: block;
