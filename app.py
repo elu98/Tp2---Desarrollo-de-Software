@@ -8,11 +8,12 @@ app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 587 
 app.config['MAIL_USE_TLS'] = True 
 app.config['MAIL_USE_SSL'] = False 
-app.config['MAIL_USERNAME'] = 'your-email@gmail.com' 
-app.config['MAIL_PASSWORD'] = 'your-email-password'
-app.config['MAIL_DEFAULT_SENDER'] = 'your-email@gmail.com' 
+app.config['MAIL_USERNAME'] = 'unidosporeldeportemtb@gmail.com' 
+app.config['MAIL_PASSWORD'] = 'pfvttqtdqeclwmsr'
+app.config['MAIL_DEFAULT_SENDER'] = 'unidosporeldeportemtb@gmail.com' 
  
 mail = Mail(app)
+app.secret_key = "clavesecreta"
 
 info_evento = {
     1: {
@@ -27,13 +28,32 @@ info_evento = {
             1: {"nombre": "Corta", "valor": "100"},
             2: {"nombre": "Larga", "valor": "200"}
         },
-        "Auspiciantes": ["ausp1", "ausp2"]
+        "auspiciantes": ["google", "youtube", "linkedin", "shopify", "rebel"],
+        "telefono": "(011) 555-5555",
+        "email": "info@clubdeportivo.com.ar",
+        "sociales": {
+            "facebook": "https://www.facebook.com/unidosporeldeporte",
+            "instagram": "https://www.instagram.com/unidosporeldeporte",
+            "twitter": "https://www.twitter.com/unidosporedeporte"
+        }
+    },
+    2: {
+        "kit_carrera": ["Número de corredor (dorsal) con chip de cronometraje.",
+				"Remera técnica o jersey oficial del evento.",
+				"Botella de agua o bebida isotónica.",
+				"Barra energética o gel de nutrición.",
+				"Mapa del circuito y reglamento impreso. ",
+				"Deslinde de responsabilidad (si no fue firmado online).",
+				"Bolsa o mochila oficial del evento.",
+				"Souvenirs y material promocional de los sponsors.",
+				"Pulsera o credencial de identificación del corredor.",
+				"Ticket para hidratación o lunch post-carrera."]
     }
 }
     
 @app.route('/')
 def home():
-    return render_template('index.html', evento=info_evento[1])
+    return render_template('index.html', evento=info_evento[1], kit=info_evento[2]["kit_carrera"])
 
 @app.route('/formulario', methods=["GET", "POST"])
 def formulario():
@@ -43,7 +63,31 @@ def formulario():
         apellido = request.form.get("last_name")
         dni = request.form.get("documento")
         correo = request.form.get("correo")
-    return render_template("generic.html", evento=info_evento[1])
+
+        body = f"""
+        Nuevo competidor inscripto:
+
+        Nombre: {nombre} {apellido}
+        DNI: {dni}
+        Correo: {correo}
+        Categoría: {categoria}
+        """
+
+        try:
+            msg = Message("Nueva inscripción a la carrera",
+                          recipients=["unidosporeldeportemtb@gmail.com"])
+            msg.body = body
+            mail.send(msg)
+        except Exception as e:
+            flash(f"Error enviando correo: {str(e)}", "danger")
+
+        return redirect("formulario")
+
+    return render_template("registration.html", evento=info_evento[1])
+
+@app.errorhandler(404)
+def error(e):
+    return render_template('error.html', evento=info_evento[1]),404
 
 if __name__ == '__main__':
     app.run('localhost', port=5002, debug=True)
