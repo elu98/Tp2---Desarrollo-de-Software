@@ -65,17 +65,17 @@
 		<ul class="features">
 			<li>
 				<h3>Punto de Salida</h3>
-				<!-- <img src="{{url_for('static', filename='images/punto-salida.jpg')}}"/>-->
+				<span class="image1"><img src="{{url_for('static', filename='images/punto-salida.jpg')}}"/></span>
 				<p>El evento comenzará en la ciudad de Tandil, en la Plaza Independencia.</p>
 			</li>
 			<li>
 				<h3>Punto de Llegada</h3>
-				<!-- <img src="{{url_for('static', filename='images/punto-salida.jpg')}}"/>-->
+				<span class="image1"><img src="{{url_for('static', filename='images/punto-salida.jpg')}}"/></span>
 				<p>El evento finalizará en la ciudad de Gardey, en la Plaza Principal.</p>
 			</li>
 			<li>
 				<h3>Puntos de Hidratacion</h3>
-				<!-- <img src="{{url_for('static', filename='images/hidratacion.jpeg')}}"/>-->
+				<span class="image1"><img src="{{url_for('static', filename='images/hidratacion.jpeg')}}"/></span>
 				<p>Habrá puntos de hidratación cada 10 km a lo largo del recorrido.</p>
 			</li>					
 		</ul>
@@ -91,17 +91,17 @@
 		<ul class="features">
 			<li>
 				<h3>Punto de Salida</h3>
-				<!-- <img src="{{url_for('static', filename='images/punto-salida.jpg')}}"/>-->
+				<span class="image1"><img src="{{url_for('static', filename='images/punto-salida.jpg')}}"/></span>
 				<p>El evento comenzará en la ciudad de Tandil, en el Parque del origen.</p>
 			</li>
 			<li>
 				<h3>Punto de Llegada</h3>
-				<!-- <img src="{{url_for('static', filename='images/punto-salida.jpg')}}"/>-->
+				<span class="image1"><img src="{{url_for('static', filename='images/punto-salida.jpg')}}"/></span>
 				<p>El evento finalizará en el sitio de comienzo de la carrera.</p>
 			</li>
 			<li>
 				<h3>Puntos de Hidratacion</h3>
-				<!-- <img src="{{url_for('static', filename='images/hidratacion.jpeg')}}"/>-->
+				<span class="image1"><img src="{{url_for('static', filename='images/hidratacion.jpeg')}}"/></span>
 				<p>Habrá puntos de hidratación cada 10 km a lo largo del recorrido.</p>
 			</li>					
 		</ul>
@@ -130,9 +130,10 @@
 
 		<p>Al inscribirte en el evento, recibirás un kit de carrera que incluye los siguientes elementos:</p>
 
-		<!-- <img src="{{url_for('static', filename='images/kit.jpeg')}}"/>-->
+		<span class="image3"><img src="{{url_for('static', filename='images/kit.jpeg')}}"/></span>
 		
 		<ol>
+			<p></p>
 			{% for item in kit %}
 			<li>{{item}}</li>
 			{% endfor %}
