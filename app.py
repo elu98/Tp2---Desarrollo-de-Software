@@ -86,6 +86,10 @@ def formulario():
 
     return render_template("registration.html", evento=info_evento[1])
 
+@app.errorhandler(404)
+def error(e):
+    return render_template('error.html', evento=info_evento[1]),404
+
 if __name__ == '__main__':
     app.run('localhost', port=5002, debug=True)
 
