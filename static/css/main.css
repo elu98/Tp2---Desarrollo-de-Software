@@ -2897,6 +2897,12 @@ input, select, textarea {
 		cursor: default;
 	}
 
+		.statistics li:nth-child(1) { background: #6b9ae6; }
+		.statistics li:nth-child(2) { background: #ee4b4b; } 
+		.statistics li:nth-child(3) { background: #0077B5; } 
+		.statistics li:nth-child(4) { background: #95BF47; } 
+		.statistics li:nth-child(5) { background: #ff6f61; } 
+
 		.statistics li {
 			-moz-flex: 1;
 			-webkit-flex: 1;
@@ -2906,26 +2912,6 @@ input, select, textarea {
 			color: #ffffff;
 			text-align: center;
 		}
-
-			.statistics li.style1 {
-				background-color: #efa8b0;
-			}
-
-			.statistics li.style2 {
-				background-color: #c79cc8;
-			}
-
-			.statistics li.style3 {
-				background-color: #a89cc8;
-			}
-
-			.statistics li.style4 {
-				background-color: #9bb2e1;
-			}
-
-			.statistics li.style5 {
-				background-color: #8cc9f0;
-			}
 
 			.statistics li strong, .statistics li b {
 				display: block;
