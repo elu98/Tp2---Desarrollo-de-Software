@@ -83,7 +83,7 @@ def formulario():
 
         return redirect("formulario")
 
-    return render_template("registration.html")
+    return render_template("registration.html", evento=info_evento[1])
 
 @app.errorhandler(404)
 def error(e):

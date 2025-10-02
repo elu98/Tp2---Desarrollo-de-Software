@@ -2411,6 +2411,21 @@ input, select, textarea {
 			height: auto;
 			object-fit: cover;
 		}
+
+	.image4 {
+		display: block;
+		width: 100%;  
+		height: 550px;      
+		overflow: hidden;   
+		border-radius: 20px;
+		}
+
+		.image4 img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		display: block;
+		}
 /* List */
 
 	ol {
