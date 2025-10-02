@@ -78,13 +78,12 @@ def formulario():
                           recipients=["unidosporeldeportemtb@gmail.com"])
             msg.body = body
             mail.send(msg)
-            flash("Inscripción enviada con éxito", "success")
         except Exception as e:
             flash(f"Error enviando correo: {str(e)}", "danger")
 
         return redirect("formulario")
 
-    return render_template("registration.html", evento=info_evento[1])
+    return render_template("registration.html")
 
 @app.errorhandler(404)
 def error(e):

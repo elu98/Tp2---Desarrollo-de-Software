@@ -70,7 +70,7 @@
 			</li>
 			<li>
 				<h3>Punto de Llegada</h3>
-				<span class="image1"><img src="{{url_for('static', filename='images/punto-salida.jpg')}}"/></span>
+				<span class="image1"><img src="{{url_for('static', filename='images/punto-llegada-corta.jpeg')}}"/></span>
 				<p>El evento finalizará en la ciudad de Gardey, en la Plaza Principal.</p>
 			</li>
 			<li>
@@ -132,12 +132,12 @@
 
 		<span class="image3"><img src="{{url_for('static', filename='images/kit.jpeg')}}"/></span>
 		
-		<ol>
+		<ul class="alt2">
 			<p></p>
 			{% for item in kit %}
 			<li>{{item}}</li>
 			{% endfor %}
-		</ol>
+		</ul>
 	
 		
 	</section>
